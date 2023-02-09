@@ -1,0 +1,12 @@
+﻿int weight1 = 5;
+int weight2 = 3;
+int weight3 = 9;
+int weight4 = 1;
+int weight5 = 7;
+int max = weight1;
+if (weight2 > max) max = weight2;
+if (weight3 > max) max = weight3;
+if (weight4 > max) max = weight4;
+if (weight5 > max) max = weight5;
+Console.Write ("max = ");
+Console.WriteLine (max);
