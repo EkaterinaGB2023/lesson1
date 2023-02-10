@@ -3,22 +3,24 @@ int ffs = 1; // first friend speed
 int sfs = 2; //second friend speed
 int ds = 5; // dog speed
 int fr = 2; // direction of the dog from the first to the second
-int T = 0; 
-int count = 0;
+int time = 0; 
 
-while(dist < 10)
+int count = 0;
+while(dist > 10)
+{
     if(fr == 1)
     {
-    T = dist / (ffs + ds);
-    fr = 2;
+    time = dist / (ffs + ds); fr = 2;
     }
     else
     {
-    T = dist / (sfs + ds);
-    fr = 1;
+    time = dist / (sfs + ds); fr = 1;
     }
-dist = dist - (ffs + sfs) * T;
-count++;
 
-Console.Write("Собака пробежала раз");
-Console.WriteLine(count);
+dist = dist - (ffs + sfs) * time;
+count++;
+}
+
+Console.Write("Собака пробежала ");
+Console.Write(count);
+Console.Write(" раз");
